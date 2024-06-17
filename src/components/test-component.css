@@ -1,0 +1,5 @@
+
+.test-component3-bggradient{
+    background-image: radial-gradient(circle, #a38989, #8882a5);
+    padding: 2rem;
+}
