@@ -40,6 +40,8 @@ export function TestComponent4(props:{children:any}){
   ); 
 }
 
+
+// ---------------- Event listening ----------------
 export function TestComponent5(){
 
     function handleClick(){
@@ -55,7 +57,7 @@ export function TestComponent5(){
     ); 
 }
 
-//  Pass function as values to prop // TestComponent6 
+// ---------------- Pass function as values to prop ----------------
 export function TestComponent6({onButtonClicked,idToShow}:{onButtonClicked:any, idToShow:number}) {
     
     return (
@@ -65,6 +67,17 @@ export function TestComponent6({onButtonClicked,idToShow}:{onButtonClicked:any, 
         </div>
     );
     
+}
+
+
+export function TestComponent7({onButtonClicked}:{onButtonClicked:any}) {
+    
+  return (
+      <div>
+          <button onClick={onButtonClicked}> Click Me! TestComponent7 </button>
+      </div>
+  );
+  
 }
 
 
