@@ -65,11 +65,10 @@ export function TestComponent6({onButtonClicked,idToShow}:{onButtonClicked:any, 
             {/* <button onClick={onButtonClicked}> Click Me! TestComponent6 {idToShow} </button> */}
             <button onClick={()=>onButtonClicked("data from child component")}> Click Me! TestComponent6 {idToShow} </button>
         </div>
-    );
-    
+    );    
 }
 
-
+/* ---------------- States in react ---------------- */
 export function TestComponent7({onButtonClicked}:{onButtonClicked:any}) {
     
   return (
@@ -78,6 +77,31 @@ export function TestComponent7({onButtonClicked}:{onButtonClicked:any}) {
       </div>
   );
   
+}
+
+/* ---------------- Child to parent component communication ---------------- */
+export function TestComponent8({onTestCmponentChange}:{onTestCmponentChange:any}) {
+  function handleButtonClick():void{
+    onTestCmponentChange("data passed from TestComponent8");
+  }
+  return (
+    <div>
+      <button onClick={handleButtonClick}> Child to Parent component communication </button>
+    </div>
+  )
+}
+
+/* Lifting state up -- use parent component to pass data/state between two component */
+// ------- stateless component
+export function TestComponent9({onTestCmponentChange}:{onTestCmponentChange:any}) {
+  function handleButtonClick():void{
+    onTestCmponentChange("data passed from TestComponent9 to Main");
+  }
+  return (
+    <div>
+      <button onClick={handleButtonClick}> pass data/state between two component. </button>
+    </div>
+  )
 }
 
 

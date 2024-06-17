@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import TestComponent1, { TestComponent2, TestComponent3, TestComponent4, TestComponent5, TestComponent6, TestComponent7 } from './components/test-component';
+import TestComponent1, { TestComponent2, TestComponent3, TestComponent4, TestComponent5, TestComponent6, TestComponent7, TestComponent8, TestComponent9 } from './components/test-component';
 import ConfirmPopup from './components/confirm-popup';
+import MainComponent from './components/main-component';
 
 
 function App() {
@@ -59,6 +60,26 @@ function App() {
         }       
       });
     }
+
+    /* ---------------- Two way data binding ---------------- */
+    const[inputValue, setInputValue] = useState("Default Value");
+    function getInputData(event:{target:{value:React.SetStateAction<string>;};}) {
+      setInputValue(event.target.value);
+    }
+
+    /* ---------------- Child to parent component communication ---------------- */
+    function handleTestComponentChange(dataFromTestComponent:string):void {
+      alert(dataFromTestComponent);
+    }
+
+    /* Lifting state up -- use parent component to pass data/state between two component */
+    const [testData, setTestData] = useState('');
+    function handleTestComponentChange2(dataFromTestComponent:string) : void {
+      setTestData(dataFromTestComponent);
+    }
+
+
+
 
 
   return (
@@ -123,13 +144,26 @@ function App() {
         {newDataToShow}
         <TestComponent7 onButtonClicked={()=>handleTestButtonClicked3("Test component value")} /> 
 
-        <hr style={newLineStyle}/>
+        {/* grouping 2 useState into 1, by passing object in useState */}
+        
         {dataObject.dataToShow} 
         <br/>
         {dataObject.newDataToShow}
         <TestComponent7 onButtonClicked={()=>handleTestButtonClicked4()} /> 
 
+        {/* ---------------- Two way data binding ---------------- */}
+        <br/>
+        <hr style={newLineStyle}/>
+        <input type='text' value={inputValue} onChange={getInputData} />
         
+        {/* ---------------- Child to parent component communication ---------------- */}
+        <TestComponent8 onTestCmponentChange={handleTestComponentChange}/>
+
+        {/* Lifting state up -- use parent component to pass data/state between two component */}
+        {/* App is Stateful Component */}
+        <hr style={newLineStyle}/>
+        <TestComponent9 onTestCmponentChange={handleTestComponentChange2} />
+        <MainComponent data={testData} />
 
         <br/> <br/>
       </header>
