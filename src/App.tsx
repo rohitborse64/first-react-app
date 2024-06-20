@@ -6,8 +6,6 @@ import ConfirmPopup from './components/confirm-popup';
 import MainComponent from './components/main-component';
 
 
-
-
 function App() {
 
   const newLineStyle = {
