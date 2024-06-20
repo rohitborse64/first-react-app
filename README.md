@@ -46,6 +46,7 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 To learn React, check out the [React documentation](https://reactjs.org/).
 
 
+
 ## Hands on
 1. React components
 2. Introduction to JSX
@@ -63,15 +64,17 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 14. Hooks in react
 15. Rules for use hooks
 16. useEffect hook
-17. React Context API hook
+17. Context API hook - in complex react apps in order to communicate between 2 components without passing data using props through parent component
 18. 
 19. 
 20. 
 
 ## React Training Points Cover
+---(Hands on pending)
 
-9. React optimization technique
-10. Sending http request
+
+9. React optimization technique (Day2-1:13:00) - Rect.Memo, useCallback, useCallback Dependencies
+10. Sending http request (Day2-2:32:00) - 
 11. Custom hooks
 12. Working with forms
 13. Diving with redux
