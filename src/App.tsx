@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import TestComponent1, { TestComponent2, TestComponent3, TestComponent4, TestComponent5, TestComponent6, TestComponent7, TestComponent8, TestComponent9 } from './components/test-component';
 import ConfirmPopup from './components/confirm-popup';
 import MainComponent from './components/main-component';
+
+
 
 
 function App() {
@@ -29,6 +31,7 @@ function App() {
 
 
     /* ---------------- States in react ---------------- */
+    /* useState Used to declare and update state variables within functional components. It manages the stateful values that can change over time as the component interacts with the user or other sources of data. */
     const[dataToShow, setDataToShow] = useState("TestData");
     const[newDataToShow, setNewDataToShow] = useState("TestNewData");
     
@@ -72,13 +75,21 @@ function App() {
       alert(dataFromTestComponent);
     }
 
-    /* Lifting state up -- use parent component to pass data/state between two component */
+    /* Lifting state up -- use parent component to pass data/state between two (Main/Test) component */
     const [testData, setTestData] = useState('');
     function handleTestComponentChange2(dataFromTestComponent:string) : void {
       setTestData(dataFromTestComponent);
     }
 
-
+    /* --------------------- useEffect hook --------------------- */
+    /* Used to perform side effects in functional components. This includes fetching data, subscribing to services, or directly interacting with the DOM after the component has rendered. */
+    /* Side Effects: Common use cases include data fetching, subscriptions, or manually changing the DOM in reaction to state changes.*/
+    
+    const [counter, setCounter] = useState(0);
+    const [result, setResult] = useState(0);
+    useEffect(() => {
+      setResult(counter*10);
+    }, [counter]);
 
 
 
@@ -164,6 +175,14 @@ function App() {
         <hr style={newLineStyle}/>
         <TestComponent9 onTestCmponentChange={handleTestComponentChange2} />
         <MainComponent data={testData} />
+
+        {/* --------------------- useEffect hook --------------------- */}
+        <hr style={newLineStyle}/>
+        Counter - {counter} <br/>
+        <button onClick={()=>setCounter((count)=>count+1)}> Click </button>
+        <br/>
+        Result - {result}
+
 
         <br/> <br/>
       </header>
