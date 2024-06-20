@@ -44,3 +44,37 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+
+## Hands on
+1. React components
+2. Introduction to JSX
+3. Create react component
+4. Binding variable in react component
+5. Introduction to props
+6. Event Listening in react
+7. Pass function as value to prop
+8. State in react / using multiple useState in component
+9. Two way data binding
+10. Child to parent component communication
+11. Lifting the state up / use parent component to pass data/state between two sibling components.
+12. Stateless (test-component.tsx/main-component.tsx) - mostly used to render UI. also called presentational components.
+13. Stateful(app.tsx) - components that manage states of variable. can have some business logic in them.
+14. Hooks in react
+15. Rules for use hooks
+16. useEffect hook
+17. React Context API hook
+18. 
+19. 
+20. 
+
+## React Training Points Cover
+
+9. React optimization technique
+10. Sending http request
+11. Custom hooks
+12. Working with forms
+13. Diving with redux
+14. Advanced Redux
+15. React router
+16. Adding authentication to react apps
