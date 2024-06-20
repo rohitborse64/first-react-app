@@ -63,12 +63,13 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 14. Hooks in react
 15. Rules for use hooks
 16. useEffect hook
-17. React Context API hook
+17. Context API hook - in complex react apps in order to communicate between 2 components without passing data using props through parent component
 18. 
 19. 
 20. 
 
 ## React Training Points Cover
+
 
 9. React optimization technique
 10. Sending http request
