@@ -70,7 +70,6 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 20. 
 
 ## React Training Points Cover
----(Hands on pending)
 
 
 9. React optimization technique (Day2-1:13:00) - Rect.Memo, useCallback, useCallback Dependencies
