@@ -17,6 +17,9 @@ import TestContext from "./components/test-context";
 import MainContextHookComponent from "./components/main-contexthook-component";
 import TestContexthookComponent from "./components/test-contexthook-component";
 
+import MovieList from "./components/Movie/MovieList";
+
+
 function App() {
   const newLineStyle = {
     backgroundColor: "lightgray",
@@ -101,6 +104,41 @@ function App() {
 
   /* ---------------- Context API hook ---------------- */
   const [stateValue, setStateValue] = useState("Initial Value");
+
+
+  /* ---------- fetch movies ----------- */
+
+  const dummyMovies = [
+    {
+      id: 1,
+      title : 'Dummy1',
+      openingText: 'opening text of the movie1',
+      releaseDate: '2021-05-18',
+    },
+    {
+      id: 2,
+      title : 'Dummy2',
+      openingText: 'opening text of the movie2',
+      releaseDate: '2021-06-20',
+    },
+    {
+      id: 3,
+      title : 'Dummy3',
+      openingText: 'opening text of the movie3',
+      releaseDate: '2021-08-25',
+    },
+  ];
+
+
+
+
+
+
+
+
+
+
+
 
   return (
     <div className="App">
@@ -219,8 +257,17 @@ function App() {
         </TestContext.Provider>
 
 
+        {/* ---------- fetch movies ---------- */}
+        <hr style={newLineStyle} />
 
-
+          <React.Fragment>
+            <section>
+              <button> Fetch Movies </button>
+            </section>
+            <section>
+              <MovieList movies={dummyMovies}/>
+            </section>
+          </React.Fragment>
 
 
         <p/>

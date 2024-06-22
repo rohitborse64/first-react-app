@@ -73,7 +73,7 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 
 9. React optimization technique (Day2-1:13:00) - Rect.Memo, useCallback, useCallback Dependencies
-10. Sending http request (Day2-2:32:00) - 
+10. Sending http request (Day2-2:32:00) - listing, sending get request, 
 11. Custom hooks
 12. Working with forms
 13. Diving with redux
